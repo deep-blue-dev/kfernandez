@@ -1,0 +1,12 @@
+<%= form_for([@user, @profile]) do |f|%>
+  <%= f.label :name, "Your Full Name" %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :spouse_name, "Full name of your spouse" %><br>
+  <%= f.text_field :spouse_name %><br>
+
+  <%= f.label :address, "Address" %><br>
+  <%= f.text_field :address %><br>
+    <%=f.hidden_field :user_id, :value => @user.id%><br>
+  <%= f.submit "Continue" %>
+<% end %>

@@ -1,0 +1,24 @@
+      <%= f.label :residence, "State of Residence" %><br>
+      <%= f.select :residence, options_for_select(['Alabama' ,'Alaska' ,'Arizona' ,'Arkansas',
+                                                   'California' ,'Colorado' ,'Connecticut' ,'Delaware',
+                                                   'Florida' ,'Georgia' ,'Hawaii' ,'Idaho' ,'Illinois',
+                                                   'Indiana' ,'Iowa' ,'Kansas' ,'Kentucky' ,'Louisiana', 'Maine',
+                                                   'Maryland' ,'Massachusetts' ,'Michigan' ,'Minnesota' ,'Mississippi',
+                                                   'Missouri','Montana Nebraska','Nevada','New Hampshire','New Jersey',
+                                                   'New Mexico'  ,'New York'  ,'NorthCarolina'  ,'North Dakota'  ,'Ohio',
+                                                   'Oklahoma' ,'Oregon' ,'Pennsylvania', 'Rhode Island' ,'South Carolina',
+                                                   'South Dakota','Tennessee','Texas','Utah','Vermont','Virginia',
+                                                   'Washington' ,'West Virginia'  ,'Wisconsin' ,'Wyoming']) %><br>
+
+      <%= f.label :spouse_agreement, "Have you and your spouse agreed on obtaining a divorce?" %><br>
+      <%= f.select :spouse_agreement, options_for_select([['Yes', true], ['No', false]]) %><br>
+
+      <%= f.label :children, 'Do you have children under the age of 18 from this marriage?' %><br>
+      <%= f.select :children, options_for_select([['Yes', true], ['No', false]]) %><br>
+
+      <%= f.label :locate_spouse, 'Can you locate your spouse?' %><br>
+      <%= f.select :locate_spouse, options_for_select([['Yes', true], ['No', false]]) %><br>
+
+      <%= f.label :uncontested, 'Is this an uncontested divorce?' %><br>
+      <%= f.select :uncontested, options_for_select([['Yes', true], ['No', false]]) %><br>
+      <br>

@@ -1,0 +1,23 @@
+<h1><%= @user.name %></h1>
+
+<p>
+ <%= @user.email %>
+</p>
+
+<p>
+Your reside in:  <%= @user.residence %>
+</p>
+
+<p>
+  Is this an uncontested divorce? <%= @user.uncontested ? "Yes" : "No" %>
+</p>
+
+<% if @user.qualified? %>
+  <p>
+    You qualify for online divorce. Odalay law will contact you to guide you through the process.
+  </p>
+<% else %>
+    <p>
+      Sorry, you do not qualify for online divorce
+    </p>
+<% end %>
