@@ -12,8 +12,8 @@ class UsersController < ApplicationController
     @user.current_step = session[:user_step]
 
     p "*" * 100
-    # p session[:user_params].each_value { |f| print f if f == "true" }
-    p qualified?(session[:user_params])
+    p @user.current_step
+    p session[:user_step]
     p session[:user_params]
     p "*" * 100
 
@@ -26,7 +26,8 @@ class UsersController < ApplicationController
     end
     # byebug
     session[:user_step] = @user.current_step
-    if @user.new_record? #|| !qualified?(session[:user_params])
+    if @user.new_record?
+        # byebug
         render "new"
     else
       session[:user_step] = session[:user_params] = nil
@@ -44,6 +45,7 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation,
                                   :residence, :spouse_agreement, :children, :locate_spouse,
-                                  :uncontested)
+                                  :uncontested, :date_of_birth, :address, :spouse_name,
+                                  :spouse_dob, :spouse_address, :spouse_email)
   end
 end

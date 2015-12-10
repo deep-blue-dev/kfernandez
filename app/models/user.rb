@@ -9,6 +9,11 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true#, length: { minimum: 6 }
 
+  # validates :address, :date_of_birth, :spouse_name, :spouse_dob, :spouse_address,
+  #           :spouse_email, presence: true
+
+  validates_presence_of :address, :date_of_birth, :spouse_name, :spouse_dob,
+                        :spouse_address, :spouse_email
   has_one :profile
 
   attr_writer :current_step
@@ -55,7 +60,7 @@ class User < ActiveRecord::Base
   end
 
   def steps
-    %w[qualify sign_in]
+    %w[qualify spouse_info sign_in]
   end
 
   def next_step
