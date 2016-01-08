@@ -28,7 +28,9 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem "awesome_print", require:"ap"
 
-gem 'wicked'
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

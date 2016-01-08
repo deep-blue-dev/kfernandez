@@ -38,6 +38,20 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    respond_to do |format|
+     format.html
+    #  format.pdf do
+    #    render :pdf => "show",
+    #           :template => 'users/show.pdf.erb',
+    #           :layout => 'pdf'
+    #  end
+     format.pdf do
+        @pdf = render_to_string :pdf => "show",
+            :template => 'users/show.pdf.erb',
+            :encoding => "UTF-8"
+        send_data(@pdf, :filename => @user.name,  :type=>"application/pdf")
+      end
+   end
   end
 
   private
