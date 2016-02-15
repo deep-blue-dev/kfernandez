@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root 'pages#index'
+  get 'pages/docprep', as: 'docprep'
+  get 'pages/divorce_no_children_no_debt', as: 'no_children_no_debt'
+  get 'pages/divorce_with_debt', as: 'divorce_with_debt'
+  get 'pages/divorce_with_debt_and_children', as: 'divorce_with_debt_and_children'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
