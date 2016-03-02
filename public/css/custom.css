@@ -1,4 +1,4 @@
-/** Table of Content 
+/** Table of Content
 
 [Master Stylesheet]
 
@@ -1537,7 +1537,7 @@ strong.burger-logo a {
 }
 /*ATTORNEYS TEAM STYLE 3 END*/
 
-	
+
 
 /************************************************ATTORNEYS TEAM SECTION END************************************************/
 
@@ -5132,3 +5132,7 @@ code {
 }
 
 /**************************IMAGES EFFECT END**************************/
+
+.text-white {
+  color: white;
+}
