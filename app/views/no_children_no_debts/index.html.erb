@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing No Children No Debts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @no_children_no_debts.each do |no_children_no_debt| %>
+      <tr>
+        <td><%= link_to 'Show', no_children_no_debt %></td>
+        <td><%= link_to 'Edit', edit_no_children_no_debt_path(no_children_no_debt) %></td>
+        <td><%= link_to 'Destroy', no_children_no_debt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New No children no debt', new_no_children_no_debt_path %>

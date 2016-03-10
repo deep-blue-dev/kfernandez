@@ -1,0 +1,39 @@
+<%= form_for(@no_children_no_debt) do |f| %>
+  <% if @no_children_no_debt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@no_children_no_debt.errors.count, "error") %> prohibited this no_children_no_debt from being saved:</h2>
+
+      <ul>
+      <% @no_children_no_debt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :husband_name, placeholder: "Husband Name" %>
+  <%= f.text_field :husband_address, placeholder: "Husband Address" %>
+  <%= f.text_field :husband_city, placeholder: "husband City" %>
+  <%= f.text_field :husband_zip, placeholder: "Husband Zip Code" %>
+  <%= f.email_field :husband_email, placeholder: "Husband Email" %>
+  <%= f.text_field :husband_phone, placeholder: "Husband Phone" %>
+  <%= f.text_field :husband_fax, placeholder: "Husband Fax" %>
+  <%= f.hidden_field :husband_date, value: Date.today %>
+  <%= f.text_field :wife_name, placeholder: "Wife's Full Legal Name" %>
+  <%= f.email_field :wife_email, placeholder: "Wife Email" %>
+  <%= f.text_field :wife_address, placeholder: "Wife Address" %>
+  <%= f.text_field :wife_city, placeholder: "Wife City" %>
+  <%= f.text_field :wife_state, placeholder: "Wife State" %>
+  <%= f.text_field :wife_zip, placeholder: "Wife Zip Code" %>
+  <%= f.hidden_field :wife_date, value: Date.today %>
+  <%= f.label :marriage_date, "Date of Marriage" %><br>
+  <%= f.date_field :marriage_date %><br>
+  <%= f.label :marriage_date, "Where did you get Married?" %>
+  <%= f.text_field :marriage_city, placeholder: "Marriage City"  %>
+  <%= f.text_field :marriage_state, placeholder: "Marriage State"  %>
+  <%= f.text_field :marriage_country, placeholder: "Marriage Country"  %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
