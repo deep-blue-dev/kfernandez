@@ -1,0 +1,101 @@
+<%= form_for(@divorce_with_asset) do |f| %>
+  <% if @divorce_with_asset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@divorce_with_asset.errors.count, "error") %> prohibited this divorce_with_asset from being saved:</h2>
+
+      <ul>
+      <% @divorce_with_asset.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filing %><br>
+    <%= f.text_field :filing %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_name %><br>
+    <%= f.text_field :husband_name %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_address %><br>
+    <%= f.text_field :husband_address %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_city %><br>
+    <%= f.text_field :husband_city %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_state %><br>
+    <%= f.text_field :husband_state %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_zip %><br>
+    <%= f.text_field :husband_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_phone %><br>
+    <%= f.text_field :husband_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_fax %><br>
+    <%= f.text_field :husband_fax %>
+  </div>
+  <div class="field">
+    <%= f.label :husband_email %><br>
+    <%= f.text_field :husband_email %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_name %><br>
+    <%= f.text_field :wife_name %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_address %><br>
+    <%= f.text_field :wife_address %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_city %><br>
+    <%= f.text_field :wife_city %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_state %><br>
+    <%= f.text_field :wife_state %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_zip %><br>
+    <%= f.text_field :wife_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_phone %><br>
+    <%= f.text_field :wife_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_fax %><br>
+    <%= f.text_field :wife_fax %>
+  </div>
+  <div class="field">
+    <%= f.label :wife_email %><br>
+    <%= f.text_field :wife_email %>
+  </div>
+  <div class="field">
+    <%= f.label :jurisdiction %><br>
+    <%= f.text_field :jurisdiction %>
+  </div>
+  <div class="field">
+    <%= f.label :marriage_date %><br>
+    <%= f.date_select :marriage_date %>
+  </div>
+  <div class="field">
+    <%= f.label :separation_date %><br>
+    <%= f.date_select :separation_date %>
+  </div>
+  <div class="field">
+    <%= f.label :dissolution %><br>
+    <%= f.text_field :dissolution %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :no_children_no_debts
-  # You can have the root of your site routed with "root"
+  resources :divorce_with_assets
+# You can have the root of your site routed with "root"
   # root 'welcome#index'
 
   # Example of regular route:

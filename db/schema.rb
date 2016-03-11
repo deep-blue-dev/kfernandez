@@ -11,10 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160302191821) do
+ActiveRecord::Schema.define(version: 20160310202313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "divorce_with_assets", force: :cascade do |t|
+    t.string   "filing"
+    t.string   "husband_name"
+    t.string   "husband_address"
+    t.string   "husband_city"
+    t.string   "husband_state"
+    t.string   "husband_zip"
+    t.string   "husband_phone"
+    t.string   "husband_fax"
+    t.string   "husband_email"
+    t.string   "wife_name"
+    t.string   "wife_address"
+    t.string   "wife_city"
+    t.string   "wife_state"
+    t.string   "wife_zip"
+    t.string   "wife_phone"
+    t.string   "wife_fax"
+    t.string   "wife_email"
+    t.string   "jurisdiction"
+    t.date     "marriage_date"
+    t.date     "separation_date"
+    t.string   "dissolution"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "no_children_no_debts", force: :cascade do |t|
     t.string   "husband_name"

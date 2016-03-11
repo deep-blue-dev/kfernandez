@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filing: MyString
+  husband_name: MyString
+  husband_address: MyString
+  husband_city: MyString
+  husband_state: MyString
+  husband_zip: MyString
+  husband_phone: MyString
+  husband_fax: MyString
+  husband_email: MyString
+  wife_name: MyString
+  wife_address: MyString
+  wife_city: MyString
+  wife_state: MyString
+  wife_zip: MyString
+  wife_phone: MyString
+  wife_fax: MyString
+  wife_email: MyString
+  jurisdiction: MyString
+  marriage_date: 2016-03-10
+  separation_date: 2016-03-10
+  dissolution: MyString
+
+two:
+  filing: MyString
+  husband_name: MyString
+  husband_address: MyString
+  husband_city: MyString
+  husband_state: MyString
+  husband_zip: MyString
+  husband_phone: MyString
+  husband_fax: MyString
+  husband_email: MyString
+  wife_name: MyString
+  wife_address: MyString
+  wife_city: MyString
+  wife_state: MyString
+  wife_zip: MyString
+  wife_phone: MyString
+  wife_fax: MyString
+  wife_email: MyString
+  jurisdiction: MyString
+  marriage_date: 2016-03-10
+  separation_date: 2016-03-10
+  dissolution: MyString
